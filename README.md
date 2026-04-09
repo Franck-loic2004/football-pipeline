@@ -1,4 +1,4 @@
-# ⚽ Football Pipeline
+#  Football Pipeline
 
 ## Description
 Pipeline ETL automatisé qui extrait des données depuis l'API football-data.org,
