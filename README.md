@@ -3,7 +3,9 @@
 ## Description
 Pipeline ETL automatisé qui extrait des données depuis l'API football-data.org,
 les transforme et les stocke dans une base de données SQLite pour produire
-des insights sur les 5 plus grands championnats d'Europe et la Champions League (classement équipes, meilleurs buteurs,  résultats de matchs).
+des insights sur 6 compétitions : Ligue 1, Premier League, Bundesliga, Serie A,
+La Liga et la Champions League.
+
 
 ## Technologies utilisées
 
@@ -55,12 +57,32 @@ football_pipeline/
 ├── .env            # Clé API (génère ta clé sur football-data.org )
 └── .gitignore      # Fichiers ignorés par Git
 
+## Base de données
+6 tables SQLite générées automatiquement :
+
+- **standings** — classements par compétition  
+- **matches** — tous les matchs (passés et à venir)
+- **scorers** — meilleurs buteurs par compétition
+- **squad** — effectifs des équipes suivies
+- **player_matches** — historique des matchs par joueur 
 
 
-
-## Analyses générées  Champions League et dans les 5 grands championnats d'Europe
+## Analyses générées  par compétition
 
 -  Top 5 équipes au classement
 -  Top 5 équipes avec le plus de buts marqués
 -  Top 5 matchs avec le plus de buts
 -  Top 5 meilleurs buteurs 
+-  Joueurs français d'une équipe suivie
+-  5 prochains matchs d'une équipe suivie
+-  5 dernier matchs de Ousmane Dembélé
+-  Top 5 équipes avec le plus de victoires
+
+## Compétitions suivies
+
+FL1 -> Ligue 1
+CL -> UEFA Champions LEague
+PL -> Premier League
+BL1 -> Bundesliga
+SA -> Serie A
+PD -> La Liga
