@@ -12,7 +12,7 @@ def run_queries(competition,team):
         
         print(f"\n── Top 5 équipes de {competition} ──")
         df1 = pd.read_sql("""
-            select team from standings where competition = ? order by points desc limit 5
+            select team from standings where competition = ?t order by points desc limit 5
         """, conn, params=(competition,))
         print(df1.to_string(index=False))
         print("\n")
