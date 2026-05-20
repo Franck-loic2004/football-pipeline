@@ -1,0 +1,9 @@
+services:
+  pipeline:
+    build: .
+    container_name: football_pipeline
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    restart: unless-stopped
